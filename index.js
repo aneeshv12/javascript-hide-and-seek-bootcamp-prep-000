@@ -18,17 +18,13 @@ function deepestChild(){
   const lis = document.getElementById('app').querySelectorAll('div#grand-node')[0];
   
   var current = lis.querySelectorAll('div');
-  var next = '';
-  while(current){
-    console.log(current);
-      if(!current[0].querySelectorAll('div')[0]){
-        return current[0];
-      }
-    
-  console.log("test");
-
-    next = current;
-    current = next.shift();
-  }
-  return null;
+  
+  
+  for(var i = 0;i<current.length;i++){
+if(!current[i].querySelector('div')){
+return current[i];
+   }
+}
+return null;
+ 
 }
